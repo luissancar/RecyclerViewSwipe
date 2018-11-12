@@ -26,12 +26,7 @@ class MainActivity : AppCompatActivity() {
     private var adaptera : DatosAdapter?=null
     private var view: View? = null
 
-    private var alertDialog: AlertDialog.Builder? = null
 
-    private var et_name: EditText? = null
-    private var edit_position: Int = 0
-
-    private var add = false
 
 
 
@@ -63,28 +58,17 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun botonPulsado(v: View){
 
-        addDatos2()
-        recyclerViewMain.adapter = DatosAdapter(datos, this)
-    }
 
     fun addDatos(){
 
-        for (i in 1..2) {
+        for (i in 1..20) {
             var reg: registro=registro("dato A " + i.toString(),"dato B " + i.toString(),"http://gcba.github.io/iconos/Iconografia_PNG/arbol.png")
             datos.add(reg)
         }
 
     }
-    fun addDatos2(){
-        for (i in 1..2) {
-            println("aaaaaafffffffffffffffffffffff")
-            var reg: registro=registro("nuevo A " + i.toString(),"nuevo B " + i.toString(),"http://gcba.github.io/iconos/Iconografia_PNG/auto.png")
-            datos.add(reg)
-        }
 
-    }
 
 
     private fun initSwipe() {
